@@ -1,35 +1,30 @@
 # Start React app
 
-1. install node(npm included)
+first install the node (npm included)
 
-2. in terminal:
+- `npm init react-app workout-planner`
 
-### `npm init react-app workout-planner`
+- `npm install` - install dependencies
+- `npm install --loglevel=error` - install dependencies without WARN
 
-### `npm start`
+- `npm start`
+- `ctrl + c` - to stop app
 
-### `npm test`
+## Available Scripts
 
-### `npm run build`
+In the project directory, you can run:
 
-To stop app
-
-### `ctrl + c`
-
-[http://localhost:3000](http://localhost:3000)
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm run analyze` - generates a report with bundle analysis (require `npm run build`)
+- `npm run build` - builds the production build
+- `npm run eject` - [ejects CRA](https://create-react-app.dev/docs/available-scripts/#npm-run-eject)
+- `npm run lint` - runs [ESLint](https://eslint.org) against all `js` code
+- `npm run pre-commit` - runs checks before each commit
+- `npm run prettier` - entry point for [`Prettier`](https://prettier.io)
+- `npm run prepare` - automatically enable git hooks after install
+- `npm run start` - runs the application in development mode
+- `npm run stylelint` - runs [Stylelint](https://stylelint.io) for all styles
+  (both `css` and [`css-in-js`](https://styled-components.com))
+- `npm run test` - launches the test runner in the interactive watch mode
 
 ## Learn More
 
