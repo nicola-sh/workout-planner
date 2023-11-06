@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useMemo, useState } from "react";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 
-function App() {
+import Main from "./pages/Main";
+import { createTheme } from "./utils/theme";
+
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: ${({ theme }) => theme.background.default};
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    height: 100%;
+    margin: 0;
+  }
+`;
+
+const App = () => {
+  const [mode, setMode] = useState("dark");
+
+  const toggleMode = () => {
+    if (mode === "dark") {
+      setMode("light");
+    } else {
+      setMode("dark");
+    }
+  };
+
+  const theme = useMemo(() => createTheme(mode), [mode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Main toggleMode={toggleMode} />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
