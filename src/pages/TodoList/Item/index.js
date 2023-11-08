@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import crossImage from "assets/cross.png";
-import tickImage from "assets/tick.png";
+import exerciseImage from "assets/ExerciseImage04.png";
 
 import { Container, Image, Text } from "./styled";
 
@@ -14,8 +13,11 @@ function Item(props) {
 
   return (
     <Container onClick={toggleCompleteness}>
-      <Image src={isCompleted ? tickImage : crossImage} />
-      <Text>{props.text}</Text>
+      {/* <Image src={isCompleted ? tickImage : crossImage} /> */}
+      {/* <Text>{props.text}</Text> */}
+      <Image src={exerciseImage} />
+      <Text>TimeToStart</Text>
+      <Text>DayName</Text>
     </Container>
   );
 }
