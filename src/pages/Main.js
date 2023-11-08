@@ -14,6 +14,7 @@ export const MainContainer = styled.main`
 
 import React from "react";
 import { useState } from "react";
+import DaysList from "components/DaysList";
 
 const Main = () => {
   const [days, setDays] = useState([
@@ -25,12 +26,7 @@ const Main = () => {
 
   return (
     <MainContainer>
-      {days.map((day) => (
-        <div className="day-preview" key={day.id}>
-          <h3>{day.TimeToStart}</h3>
-          <h4>{day.DayName}</h4>
-        </div>
-      ))}
+      <DaysList days={days} />
     </MainContainer>
   );
 };
