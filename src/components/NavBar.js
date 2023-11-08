@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faChartBar, faUser } from "@fortawesome/free-solid-svg-icons";
+import MainIcon from "assets/NavBarIcons/Main.png";
+import StatsIcon from "assets/NavBarIcons/Stats.png";
+import UserProfileIcon from "assets/NavBarIcons/UserProfile.png";
+
+import Main from "pages/Main";
+import Stats from "pages/Stats";
+import UserProfile from "pages/UserProfile";
 
 const NavBarContainer = styled.nav`
   display: inline-flex;
@@ -12,43 +17,48 @@ const NavBarContainer = styled.nav`
   gap: 37px;
 `;
 
-const Title = styled.h1`
-  width: 75px;
-  color: #596aff;
-  text-align: center;
-  font-feature-settings:
-    "clig" off,
-    "liga" off;
-  font-family: "SF Pro Display";
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
-  letter-spacing: 0.3px;
-`;
-
 const NavLink = styled.a`
   color: #596aff;
   text-decoration: none;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #8f98a7;
+
   &:hover {
-    text-decoration: underline;
+    color: #596aff;
   }
+
+  &:active {
+    color: #596aff;
+  }
+`;
+
+const IconImage = styled.img`
+  width: 24px;
+  height: 24px;
+`;
+
+const Text = styled.span`
+  margin-top: 4px;
 `;
 
 const NavBar = () => {
   return (
     <NavBarContainer>
       <NavLink href="/pages/Main">
-        <FontAwesomeIcon icon={faHome} />
-        Главная
+        <IconImage src={MainIcon} alt="Main" />
+        <Text>Главная</Text>
       </NavLink>
       <NavLink href="/pages/Stats">
-        <FontAwesomeIcon icon={faChartBar} />
-        Статистика
+        <IconImage src={StatsIcon} alt="Stats" />
+        <Text>Статистика</Text>
       </NavLink>
       <NavLink href="/pages/UserProfile">
-        <FontAwesomeIcon icon={faUser} />
-        Мои данные
+        <IconImage src={UserProfileIcon} alt="UserProfile" />
+        <Text>Мои данные</Text>
       </NavLink>
     </NavBarContainer>
   );

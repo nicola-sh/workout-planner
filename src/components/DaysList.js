@@ -28,7 +28,7 @@ const TimeToStart = styled.h3`
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  margin: 0;
+  margin: 28px 16px 28px 16px;
 `;
 
 const DayName = styled.h4`
@@ -39,7 +39,7 @@ const DayName = styled.h4`
   font-size: 19px;
   font-weight: 600;
   line-height: 24px;
-  margin: 0;
+  margin: 28px 16px 28px 16px;
 `;
 
 const DaysList = ({ days }) => {
