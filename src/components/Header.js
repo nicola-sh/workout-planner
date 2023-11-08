@@ -1,26 +1,30 @@
-import styled from "styled-components";
 import React from "react";
+import styled from "styled-components";
 
-export const Container = styled.header`
-  align-items: center;
-  background-color: grey;
+const HeaderContainer = styled.header`
+  background: #000;
+  color: #fff;
   display: flex;
-  flex: 1;
   justify-content: space-between;
-  padding: 8px 16px;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
-export const Title = styled.h1`
-  color: black;
-  font-size: 20px;
-  margin: 0 16px;
+const Title = styled.h1`
+  font-size: 24px;
+  margin: 0;
 `;
 
 const Header = () => {
   return (
-    <Container>
+    <HeaderContainer>
       <Title>Главная</Title>
-    </Container>
+    </HeaderContainer>
   );
 };
 
