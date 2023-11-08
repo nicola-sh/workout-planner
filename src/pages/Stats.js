@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled from "styled-components";
 
 export const StatsContainer = styled.main`
@@ -13,7 +14,9 @@ export const StatsContainer = styled.main`
   min-height: 600px;
 `;
 
-const Main = () => {
+const Stats = ({ setCurrentPage }) => {
+  setCurrentPage("Статистика");
+
   return (
     <StatsContainer>
       <h1>Stats</h1>
@@ -21,4 +24,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Stats;

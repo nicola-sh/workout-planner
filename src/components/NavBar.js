@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import MainIcon from "assets/NavBarIcons/Main.png";
-import StatsIcon from "assets/NavBarIcons/Stats.png";
-import UserProfileIcon from "assets/NavBarIcons/UserProfile.png";
+import MainIcon from "assets/NavBarIcons/Main.svg";
+import StatsIcon from "assets/NavBarIcons/Stats.svg";
+import UserProfileIcon from "assets/NavBarIcons/UserProfile.svg";
 
 import Main from "pages/Main";
 import Stats from "pages/Stats";
@@ -18,7 +18,6 @@ const NavBarContainer = styled.nav`
 `;
 
 const NavLink = styled.a`
-  color: #596aff;
   text-decoration: none;
   font-size: 16px;
   display: flex;
@@ -39,6 +38,17 @@ const NavLink = styled.a`
 const IconImage = styled.img`
   width: 24px;
   height: 24px;
+
+  &:hover {
+    color: #596aff;
+    fill: #596aff;
+  }
+
+  &:active {
+    color: #596aff;
+    fill: #596aff;
+    filter: invert(0.34) sepia(1) saturate(16.9) hue-rotate(223.2deg) brightness(1);
+  }
 `;
 
 const Text = styled.span`

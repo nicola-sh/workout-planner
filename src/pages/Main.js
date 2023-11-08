@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import DaysList from "components/DaysList";
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
@@ -12,11 +14,9 @@ export const MainContainer = styled.main`
   min-height: 600px;
 `;
 
-import React from "react";
-import { useState } from "react";
-import DaysList from "components/DaysList";
+const Main = ({ setCurrentPage }) => {
+  setCurrentPage("Главная");
 
-const Main = () => {
   const [days, setDays] = useState([
     { TimeToStart: "Сегодня", DayName: "День А", id: 1 },
     { TimeToStart: "Через 2 дня", DayName: "День Б", id: 2 },

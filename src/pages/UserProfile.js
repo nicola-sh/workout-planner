@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled from "styled-components";
 
 export const UserProfileContainer = styled.main`
@@ -13,7 +14,9 @@ export const UserProfileContainer = styled.main`
   min-height: 600px;
 `;
 
-const Main = () => {
+const UserProfile = ({ setCurrentPage }) => {
+  setCurrentPage("Профиль пользователя");
+
   return (
     <UserProfileContainer>
       <h1>UserProfile</h1>
@@ -21,4 +24,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default UserProfile;

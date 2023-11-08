@@ -31,10 +31,10 @@ const Title = styled.h1`
   margin: 0;
 `;
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <HeaderContainer>
-      <Title>Главная</Title>
+      <Title>{title}</Title>
     </HeaderContainer>
   );
 };
