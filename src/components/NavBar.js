@@ -1,27 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faChartBar, faUser } from "@fortawesome/free-solid-svg-icons";
+
 const NavBarContainer = styled.nav`
-  background: #000;
-  color: #fff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: inline-flex;
+  padding: 0px 38px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 37px;
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
-  margin: 0;
+  width: 75px;
+  color: #596aff;
+  text-align: center;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: "SF Pro Display";
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0.3px;
 `;
 
 const NavLink = styled.a`
-  color: #fff;
+  color: #596aff;
   text-decoration: none;
   font-size: 16px;
   &:hover {
@@ -32,9 +38,18 @@ const NavLink = styled.a`
 const NavBar = () => {
   return (
     <NavBarContainer>
-      <NavLink href="/pages/Main">Главная</NavLink>
-      <NavLink href="/pages/Stats">Статистика</NavLink>
-      <NavLink href="/pages/UserProfile">Мои данные</NavLink>
+      <NavLink href="/pages/Main">
+        <FontAwesomeIcon icon={faHome} />
+        Главная
+      </NavLink>
+      <NavLink href="/pages/Stats">
+        <FontAwesomeIcon icon={faChartBar} />
+        Статистика
+      </NavLink>
+      <NavLink href="/pages/UserProfile">
+        <FontAwesomeIcon icon={faUser} />
+        Мои данные
+      </NavLink>
     </NavBarContainer>
   );
 };
