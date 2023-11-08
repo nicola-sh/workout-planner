@@ -4,8 +4,12 @@ first install the node (npm included)
 
 - `npm init react-app workout-planner`
 
+- `npm cache clean --force`
 - `npm install` - install dependencies
 - `npm install --loglevel=error` - install dependencies without WARN
+- `npm install -g npm@latest`
+- `npm audit fix`
+- `npm update`
 
 - `npm start`
 - `ctrl + c` - to stop app
