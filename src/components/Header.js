@@ -8,11 +8,7 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px 0px 12px 20px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   width: 375px;
   height: 45px;
 `;
@@ -31,7 +27,24 @@ const Title = styled.h1`
   margin: 0;
 `;
 
-const Header = ({ title }) => {
+const Header = ({ location }) => {
+  // Определите заголовок в зависимости от текущего маршрута
+  const getTitle = (pathname) => {
+    // switch(this.props.location.pathname){
+    switch (pathname.toLowerCase()) {
+      case "/":
+        return "Главная";
+      case "/stats":
+        return "Статистика";
+      case "/userprofile":
+        return "Мои данные";
+      default:
+        return "";
+    }
+  };
+
+  const title = getTitle(location.pathname);
+
   return (
     <HeaderContainer>
       <Title>{title}</Title>

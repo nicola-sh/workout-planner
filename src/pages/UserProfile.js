@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styled from "styled-components";
 
 export const UserProfileContainer = styled.main`
-  background-color: grey;
+  background-color: white;
   color: black;
   padding: 16px 32px;
   margin-top: 100px;
@@ -14,12 +14,15 @@ export const UserProfileContainer = styled.main`
   min-height: 600px;
 `;
 
-const UserProfile = ({ setCurrentPage }) => {
-  setCurrentPage("Профиль пользователя");
+export const UserProfileTitle = styled.h1`
+  font-size: 2em;
+  text-align: center;
+`;
 
+const UserProfile = () => {
   return (
     <UserProfileContainer>
-      <h1>UserProfile</h1>
+      <UserProfileTitle>UserProfile</UserProfileTitle>
     </UserProfileContainer>
   );
 };

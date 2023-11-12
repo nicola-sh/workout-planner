@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styled from "styled-components";
 
 export const StatsContainer = styled.main`
-  background-color: grey;
+  background-color: white;
   color: black;
   padding: 16px 32px;
   margin-top: 100px;
@@ -14,12 +14,15 @@ export const StatsContainer = styled.main`
   min-height: 600px;
 `;
 
-const Stats = ({ setCurrentPage }) => {
-  setCurrentPage("Статистика");
+export const StatsTitle = styled.h1`
+  font-size: 2em;
+  text-align: center;
+`;
 
+const Stats = () => {
   return (
     <StatsContainer>
-      <h1>Stats</h1>
+      <StatsTitle>Stats</StatsTitle>
     </StatsContainer>
   );
 };

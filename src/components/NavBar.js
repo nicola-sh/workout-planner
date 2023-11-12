@@ -1,13 +1,10 @@
 import React from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import MainIcon from "assets/NavBarIcons/Main.svg";
 import StatsIcon from "assets/NavBarIcons/Stats.svg";
 import UserProfileIcon from "assets/NavBarIcons/UserProfile.svg";
-
-import Main from "pages/Main";
-import Stats from "pages/Stats";
-import UserProfile from "pages/UserProfile";
 
 const NavBarContainer = styled.nav`
   display: inline-flex;
@@ -17,7 +14,7 @@ const NavBarContainer = styled.nav`
   gap: 37px;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   text-decoration: none;
   font-size: 16px;
   display: flex;
@@ -58,15 +55,15 @@ const Text = styled.span`
 const NavBar = () => {
   return (
     <NavBarContainer>
-      <NavLink href="/pages/Main">
+      <NavLink to="/">
         <IconImage src={MainIcon} alt="Main" />
         <Text>Главная</Text>
       </NavLink>
-      <NavLink href="/pages/Stats">
+      <NavLink to="/Stats">
         <IconImage src={StatsIcon} alt="Stats" />
         <Text>Статистика</Text>
       </NavLink>
-      <NavLink href="/pages/UserProfile">
+      <NavLink to="/UserProfile">
         <IconImage src={UserProfileIcon} alt="UserProfile" />
         <Text>Мои данные</Text>
       </NavLink>
