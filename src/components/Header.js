@@ -9,8 +9,11 @@ const HeaderContainer = styled.header`
   align-items: center;
   padding: 20px 0px 12px 20px;
   position: fixed;
-  width: 375px;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 45px;
+  z-index: 1000; /* Set a z-index to make sure the header is above other elements */
 `;
 
 const Title = styled.h1`
@@ -28,9 +31,8 @@ const Title = styled.h1`
 `;
 
 const Header = ({ location }) => {
-  // Определите заголовок в зависимости от текущего маршрута
+  // заголовок в зависимости от текущего маршрута
   const getTitle = (pathname) => {
-    // switch(this.props.location.pathname){
     switch (pathname.toLowerCase()) {
       case "/":
         return "Главная";

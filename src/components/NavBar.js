@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import MainIcon from "assets/NavBarIcons/Main.svg";
@@ -7,11 +7,16 @@ import StatsIcon from "assets/NavBarIcons/Stats.svg";
 import UserProfileIcon from "assets/NavBarIcons/UserProfile.svg";
 
 const NavBarContainer = styled.nav`
-  display: inline-flex;
-  padding: 0px 38px;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 37px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const NavLink = styled(Link)`

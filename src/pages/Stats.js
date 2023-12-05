@@ -1,20 +1,19 @@
-import React, { useEffect } from "react";
-
+import React from "react";
 import styled from "styled-components";
 
-export const StatsContainer = styled.main`
+const StatsContainer = styled.main`
   background-color: white;
   color: black;
-  padding: 16px 32px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding: 28px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
 `;
 
-export const StatsTitle = styled.h1`
+const StatsTitle = styled.h1`
   font-size: 2em;
   text-align: center;
 `;
@@ -22,7 +21,7 @@ export const StatsTitle = styled.h1`
 const Stats = () => {
   return (
     <StatsContainer>
-      <StatsTitle>Stats</StatsTitle>
+      <StatsTitle>Тут буду графики, статистика по тренировкам и прогрессии</StatsTitle>
     </StatsContainer>
   );
 };
