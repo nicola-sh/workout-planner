@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/workout-planner/static/js/main.39f47df9.js",
+    "static/js/787.9bdaa64a.chunk.js": "/workout-planner/static/js/787.9bdaa64a.chunk.js",
+    "index.html": "/workout-planner/index.html",
+    "static/media/UserProfile.svg": "/workout-planner/static/media/UserProfile.7f5afafb2e91df40acbd5245c40e2aa1.svg",
+    "static/media/Main.svg": "/workout-planner/static/media/Main.9d7139e673c4ae0fa1022d3030278c3f.svg",
+    "static/media/Stats.svg": "/workout-planner/static/media/Stats.7a99aea5ed7dcf7a1ee7eed2a7785803.svg",
+    "main.39f47df9.js.map": "/workout-planner/static/js/main.39f47df9.js.map",
+    "787.9bdaa64a.chunk.js.map": "/workout-planner/static/js/787.9bdaa64a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.39f47df9.js"
+  ]
+}
