@@ -1,3 +1,9 @@
+# TODO:
+- Refactoring & Clean code
+- just do it
+
+
+
 # Start React app
 
 first install the node (npm included)
